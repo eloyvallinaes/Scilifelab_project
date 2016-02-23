@@ -1,0 +1,93 @@
+Notebook starts here
+
+############### Fri 19th Feb 2016 ################
+VPN and ssh set up
+Dataset downloaded
+	grep '>' buried-exposed.3line | wc -l
+	375 sequences
+	
+SVMlight downloaded and compiled
+	executables in ~/Desktop/buried_prediction/scripts/svm_light 
+
+Tasks
+	Need to read svmlight documentation
+		http://svmlight.joachims.org/
+		How to parse the input?
+			Dictionary of k-mer
+			Matches are features
+			Score matches: 0, 1 or weights
+			Score meaning? -> physicochemistry? BLOSUM62?
+			k? 20 aa lead to many combinations
+			How many examples? 200? 2000? 20000? -> k
+	See Song 2006 BMC Bioinformatics
+	See Zhang2016 Proteins: structure, function and bioinfomatics
+		Each word is a example
+		Positive (+1) or negative (-1) depends on input assignment
+			Are there ambiguous examples? (0)
+		 
+		How is the output formated?
+
+	Need to divide dataset
+		Check for homologs
+		Test set
+		Training set
+		Sizes?
+
+Thoughts
+	Hydrobocity
+	Ca-Cb vector orientation - no structures available?
+				 - how was the input assignment done?
+	BLOSUM62 or PSSM --> msa implementation
+	I dont want to classify the sequences
+	I want to classify each residue, right?	Or small strings of residues..
+	
+17:50 leaving for the day
+
+############### Sat 20th Feb 2016 ################
+	     
+11:10 Log in from home
+
+Features used in classification of single aminoacids
+	See Cilia2010 BMC Bioinformatics
+	1. Amino acid name 
+	2. Amino acid type: physico-chemical properties
+		charged / polar / hydrophobic
+	3. Averaging of a window
+		try different sizes
+		average BLOSUM score?
+	4. Evolutionary information
+
+11:20 Writing script for extraction of features 1-3
+12:56 feat-extract.py working for features 1 and 2
+	format to svm-light is correct
+
+############### Mon 22th Feb 2016 ################
+
+12:35 Log in from University
+
+Pending tasks:
+	1) Prepare project plan - finished and sent to Karolis at 14:08
+	2) Polish feat-extract.py
+		add headers
+		make it write to output file
+		add checks to input?
+	3) Prepare dataset:
+		check homology with multiple sequence aligment: is there a better way?
+		divide dataset into test and training sets
+			write a separate script
+			5 fold crossvalidation
+			randomized?
+			divide before or after output generation?
+				division afterwards seems simpler at this point
+First run of svm-light in interactive mode (command line)
+	whole dataset used as training -> took ~ 6 min running on 1 core
+	whole dataset used as testing
+	program runs: reads input and writes output
+	logs can be saved using '>'
+	precision/recall on test set was 66.27%/79.38%
+
+First runall.sh draft
+	pending: change feat-extract.py to dynamic naming through runall.sh
+	relative pathnames are working
+
+16:49 Log out
