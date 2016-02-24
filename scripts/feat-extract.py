@@ -40,9 +40,6 @@ for group in groups:
 			outcome.append(-1)
 
 f = open('../data/'+str(sys.argv[1]+'data.svm'), 'w')
-f.write('# 2-feature dataset parsed as SVM-light input \n')
-f.write('# 1-20 are aa codes in alphabetical order \n')
-f.write('# 1-3 are three groups of aa by PC properties \n')
 for j in range(len(outcome)):
 	f.write ('{0} 1:{1} 2:{2} \n'.format(outcome[j], code[j], PC[j]))
 
