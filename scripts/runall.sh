@@ -6,27 +6,42 @@
 # Calls on feat-extract.py
 # Calls on svm_learn and svm_classify
 
-if [ -z "$1"];	then
+
+# 0 Check arguments, get paths
+
+	# Check arguments
+if [ -z "$1" ];	then
 	name="exp0"
 else
-	name=$1
+	name="$1"
 fi
-
+	# Get paths
 path=$(pwd)
 spath=${path%/*}
 
+
 # 1 Create input in svm_light readable format
-"$path"/feat-extract.py > "$spath"/data/"$name"data.svm
+"$path"/feat-extract.py "$name"
 
 # 2 Divide input into training and test set
 	# Module under construction
 
 # 3 Run learning and testing. Retrieve logs
 
-#"$path"/svm-light/svm_learn "$spath"/data/"$name"examples.svm "$spath"/outs/"$name"_model > "$spath"/logs/"$name".train.log
+"$path"/svm_light/svm_learn "$spath"/data/"$name"data.svm \
+	"$spath"/outs/"$name"_model > "$spath"/logs/"$name".train.log & pid=$!
 
-#"$path"/svm-light/svm_classify "$spath"/data/"$name"test.svm "$spath"/outs/"$name"_model "$spath"/outs/"$name"_class > "$spath"/logs/"$name".train.log
+spin='-\|/'
 
-echo "End of script"
-echo $spath
-echo $path
+i=0
+while kill -0 $pid 2>/dev/null
+do
+  i=$(( (i+1) %4 ))
+  printf "\r${spin:$i:1}"
+  sleep .1
+done
+
+"$path"/svm_light/svm_classify "$spath"/data/"$name"data.svm \
+	"$spath"/outs/"$name"_model "$spath"/outs/"$name"_class > "$spath"/logs/"$name".train.log
+
+
