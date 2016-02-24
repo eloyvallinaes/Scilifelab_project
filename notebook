@@ -97,15 +97,17 @@ First runall.sh draft
 13:00 log in from University
 
 Pending tasks:
-	1) Modify feat-extract to use name passed to runall.sh as argument
+	1) Modify feat-extract to use name passed to runall.sh as argument --> done!
 		implement sparse and conventional encoding
 	2) Multiple sequence alignment of the data set -> homologs?
-		script to remove b/e line
-		submitted to ClustalOmega with default params at 13:20
+		script to remove b/e line------------------------------------> done!
+		submitted to ClustalOmega with default params at 13:20 
+			there might be many short high similarity segments
 	3) Consider two runall.sh:
 		- dataset division for the 5 fold crossvalidation
 		- svm running with different parameters
 			kernels: linear and polinonial
 			training-test combination of set
 
-
+Added fancy indicator of script in progress!
+Script diving the data almost working

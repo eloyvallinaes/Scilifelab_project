@@ -31,15 +31,17 @@ spath=${path%/*}
 "$path"/svm_light/svm_learn "$spath"/data/"$name"data.svm \
 	"$spath"/outs/"$name"_model > "$spath"/logs/"$name".train.log & pid=$!
 
-spin='-\|/'
-
-i=0
-while kill -0 $pid 2>/dev/null
-do
-  i=$(( (i+1) %4 ))
-  printf "\r Training. Be patient... ${spin:$i:1}"
-  sleep .1
-done
+########################### Working in progress indicator
+spin='-\|/-|'						#
+							#
+i=0							#
+while kill -0 $pid 2>/dev/null				#
+do							#
+  i=$(( (i+1) %6 ))					#
+  printf "\r Training. Be patient... ${spin:$i:1}"	#
+  sleep .5						#
+done							#
+#########################################################
 
 "$path"/svm_light/svm_classify "$spath"/data/"$name"data.svm \
 	"$spath"/outs/"$name"_model "$spath"/outs/"$name"_class > "$spath"/logs/"$name".train.log
