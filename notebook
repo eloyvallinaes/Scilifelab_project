@@ -91,3 +91,21 @@ First runall.sh draft
 	relative pathnames are working
 
 16:49 Log out
+
+############### Wed 24th Feb 2016 ################
+
+13:00 log in from University
+
+Pending tasks:
+	1) Modify feat-extract to use name passed to runall.sh as argument
+		implement sparse and conventional encoding
+	2) Multiple sequence alignment of the data set -> homologs?
+		script to remove b/e line
+		submitted to ClustalOmega with default params at 13:20
+	3) Consider two runall.sh:
+		- dataset division for the 5 fold crossvalidation
+		- svm running with different parameters
+			kernels: linear and polinonial
+			training-test combination of set
+
+
