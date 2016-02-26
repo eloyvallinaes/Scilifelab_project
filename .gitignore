@@ -4,3 +4,4 @@ scripts/svm_light/
 scripts/*.swp
 outs/
 logs/
+experiments/
