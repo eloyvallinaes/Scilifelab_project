@@ -119,3 +119,15 @@ TOMORROW TASK: run complete pipeline with default svm-light parameters
 	hype hype hype :)
 
 20:50 Log out - pizza time!
+
+############### Fri 26th Feb 2016 ################
+
+Pipeline completed with homologs sorted into the same dataset:
+	./runall.sh try1 1 -- default parameters
+
+Learning ran for ~ 45 min and test output might have been sento to standard error
+	corrected runall so that logs get both stdout and stderr
+	Karolis suggests sparse encoding to make it faster
+	can svm-light run in multi thread?
+
+Running second trial to see error output
