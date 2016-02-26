@@ -131,3 +131,4 @@ Learning ran for ~ 45 min and test output might have been sento to standard erro
 	can svm-light run in multi thread?
 
 Running second trial to see error output
+	./runall.sh try2 2 -- default paramenters
