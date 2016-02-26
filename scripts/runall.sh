@@ -19,17 +19,34 @@ fi
 path=$(pwd)
 spath=${path%/*}
 
+	# Create folder
+if [ ! -d "../experiments/$name" ];
+then
+	mkdir ../experiments/"$name"
+else
+	echo 'Folder ../experiments/$name already exists'
+	exit
+fi
 
-# 1 Create input in svm_light readable format
+# 1 Divide into test, training and independet taking care of homologs
+"$path"/set-divide_homologs.py "$name"
+
+# 2 Create input in svm_light readable format
 "$path"/feat-extract.py "$name"
 
-# 2 Divide input into training and test set
-	# Module under construction
+# Merge training and rename test set
+mv "../experiments/$name/set$2.svm" "../experiments/$name/test.svm"
+for i in $( ls ../experiments/* | grep set.\.svm );
+do
+	cat "../experiments/$name/$i" > "../experiments/$name/training.svm"
+	rm "../experiments/$name/$i"
+done
 
-# 3 Run learning and testing. Retrieve logs
 
-"$path"/svm_light/svm_learn "$spath"/data/"$name"data.svm \
-	"$spath"/outs/"$name"_model > "$spath"/logs/"$name".train.log & pid=$!
+# 4 Run learning and testing. Retrieve logs
+
+"$path"/svm_light/svm_learn "$spath"/experiments/"$name"/training.svm \
+	"$spath"/experiments/"$name"/model $> "$spath"/experiments/"$name"/train.log & pid=$!
 
 ########################### Working in progress indicator
 spin='-\|/-|'						#
@@ -43,7 +60,7 @@ do							#
 done							#
 #########################################################
 
-"$path"/svm_light/svm_classify "$spath"/data/"$name"data.svm \
-	"$spath"/outs/"$name"_model "$spath"/outs/"$name"_class > "$spath"/logs/"$name".train.log
+"$path"/svm_light/svm_classify "$spath"/experiments/"$name"/test.svm \
+	"$spath"/experiments/"$name"_model "$spath"/experiments/"$name"/class &> "$spath"/experiments/"$name"/test.log
 
 

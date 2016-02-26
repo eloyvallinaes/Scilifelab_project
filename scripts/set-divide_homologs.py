@@ -6,15 +6,16 @@
 # Filter homologs using clustering results from CD hit
 import sys
 
+folder=str(sys.argv[1])+'/'
 f = open('../data/CDhit.cluster', 'r').readlines()
 g = open('../data/buried-exposed.3line', 'r').readlines()
 
-set1 = open('../data/set1.3line', 'w')
-set2 = open('../data/set2.3line', 'w')
-set3 = open('../data/set3.3line', 'w')
-set4 = open('../data/set4.3line', 'w')
-set5 = open('../data/set5.3line', 'w')
-set6 = open('../data/set6.3line', 'w')
+set1 = open('../experiments/'+folder+'set1.3line', 'w')
+set2 = open('../experiments/'+folder+'set2.3line', 'w')
+set3 = open('../experiments/'+folder+'set3.3line', 'w')
+set4 = open('../experiments/'+folder+'set4.3line', 'w')
+set5 = open('../experiments/'+folder+'set5.3line', 'w')
+set6 = open('../experiments/'+folder+'independent-set.3line', 'w')
 allsets = [set1, set2, set3, set4, set5, set6]
 set=[]
 setcount=0
@@ -29,7 +30,6 @@ for line in f:
 
 	if '>Cluster' not in line:
 		set.append(line.split()[2])
-		print len(set), 'of', len(g)/18
 
 		if (len(set) >= len(g)/18 and setcount < len(allsets) and '>Cluster' in nextline):
 			for name in set:
