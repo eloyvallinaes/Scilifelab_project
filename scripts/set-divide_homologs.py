@@ -18,20 +18,34 @@ set6 = open('../data/set6.3line', 'w')
 allsets = [set1, set2, set3, set4, set5, set6]
 set=[]
 setcount=0
-counter=1
+counter=0
+tot=0
 
 for line in f:
+	if tot+1 < len(f):
+		nextline=f[tot+1]
+	else:
+		nextline='eof'
+
 	if '>Cluster' not in line:
 		set.append(line.split()[2])
-		counter=counter+1
-		nextline=f[counter]
-	else:
-		if (set and counter >= len(f)/6+1 and setcount <=5 and '>Cluster' in nextline):
+		print len(set), 'of', len(g)/18
+
+		if (len(set) >= len(g)/18 and setcount < len(allsets) and '>Cluster' in nextline):
 			for name in set:
 				name = name.replace('...','\n')
 
 				allsets[setcount].write(g[g.index(name)])
 				allsets[setcount].write(g[g.index(name)+1])
 				allsets[setcount].write(g[g.index(name)+2])
-			setcount=setcount+1
 
+			setcount=setcount+1
+			counter=1
+			set=[]
+		elif 'eof' in nextline:
+			for name in set:
+				name = name.replace('...','\n')
+				allsets[-1].write(g[g.index(name)])
+				allsets[-1].write(g[g.index(name)+1])
+				allsets[-1].write(g[g.index(name)+2])
+	tot=tot+1
