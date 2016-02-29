@@ -45,7 +45,7 @@ done
 
 # 4 Run learning and testing. Retrieve logs
 
-"$path"/svm_light/svm_learn -v 3 -t 1 "$spath"/experiments/"$name"/training.svm \
+"$path"/svm_light/svm_learn -t 0 "$spath"/experiments/"$name"/training.svm \
 	"$spath"/experiments/"$name"/model $> "$spath"/experiments/"$name"/train.log & pid=$!
 
 ########################### Working in progress indicator
@@ -60,7 +60,10 @@ done
 #done							#
 #########################################################
 
+sleep 1
+
 "$path"/svm_light/svm_classify -v 3 "$spath"/experiments/"$name"/test.svm \
-	"$spath"/experiments/"$name"/model "$spath"/experiments/"$name"/class &> "$spath"/experiments/"$name"/test.log
+	"$spath"/experiments/"$name"/model "$spath"/experiments/"$name"/class &> \
+	"$spath"/experiments/"$name"/test.log
 
 

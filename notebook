@@ -149,5 +149,14 @@ Training was problematic on try2
 
 Try test 5 with polynomial kernel
 	./runall.sh poly5 5
-	kernel selection needs to be writing in the script
+	kernel selection needs to be writtenng in the script
 	argument-based selection will be added in future versions
+	eventually, have tried polinomial kernel with all the 5 test sets
+
+
+############### Mon 29th Feb 2016 ################
+
+Review results form linear and polynomial kernel for the 5 test sets
+
+Change feat-extract to sparse encoding and repeat
+	add entries to dictionary
