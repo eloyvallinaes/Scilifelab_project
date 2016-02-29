@@ -60,7 +60,7 @@ done
 #done							#
 #########################################################
 
-sleep 1
+sleep 10
 
 "$path"/svm_light/svm_classify -v 3 "$spath"/experiments/"$name"/test.svm \
 	"$spath"/experiments/"$name"/model "$spath"/experiments/"$name"/class &> \
