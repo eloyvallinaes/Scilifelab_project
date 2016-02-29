@@ -24,7 +24,7 @@ if [ ! -d "../experiments/$name" ];
 then
 	mkdir ../experiments/"$name"
 else
-	echo 'Folder ../experiments/$name already exists'
+	echo "Folder ../experiments/$name already exists"
 	exit
 fi
 
@@ -45,22 +45,22 @@ done
 
 # 4 Run learning and testing. Retrieve logs
 
-"$path"/svm_light/svm_learn "$spath"/experiments/"$name"/training.svm \
+"$path"/svm_light/svm_learn -v 3 -t 1 "$spath"/experiments/"$name"/training.svm \
 	"$spath"/experiments/"$name"/model $> "$spath"/experiments/"$name"/train.log & pid=$!
 
 ########################### Working in progress indicator
-spin='-\|/-|'						#
+#spin='-\|/-|'						#
 							#
-i=0							#
-while kill -0 $pid 2>/dev/null				#
-do							#
-  i=$(( (i+1) %6 ))					#
-  printf "\r Training. Be patient... ${spin:$i:1}"	#
-  sleep .5						#
-done							#
+#i=0							#
+#while kill -0 $pid 2>/dev/null				#
+#do							#
+#  i=$(( (i+1) %6 ))					#
+#  printf "\r Training. Be patient... ${spin:$i:1}"	#
+#  sleep .5						#
+#done							#
 #########################################################
 
-"$path"/svm_light/svm_classify "$spath"/experiments/"$name"/test.svm \
-	"$spath"/experiments/"$name"_model "$spath"/experiments/"$name"/class &> "$spath"/experiments/"$name"/test.log
+"$path"/svm_light/svm_classify -v 3 "$spath"/experiments/"$name"/test.svm \
+	"$spath"/experiments/"$name"/model "$spath"/experiments/"$name"/class &> "$spath"/experiments/"$name"/test.log
 
 

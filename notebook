@@ -128,7 +128,26 @@ Pipeline completed with homologs sorted into the same dataset:
 Learning ran for ~ 45 min and test output might have been sento to standard error
 	corrected runall so that logs get both stdout and stderr
 	Karolis suggests sparse encoding to make it faster
-	can svm-light run in multi thread?
+	can svm-light run in multi thread? --------------------> NO! :'(
+		but I can run parallel trials in different cores right?
 
 Running second trial to see error output
 	./runall.sh try2 2 -- default paramenters
+
+Running third, fourth and fifth with time tracking and default parameters
+
+############### Sat 27th Feb 2016 ################ 
+
+Runall corrected
+	wrong path to model
+
+Best results ~ 67% precission were obtained on the fith try:
+	selecting the last part of the dataset as test set
+
+Training was problematic on try2
+	looks like it did not converge after 65 min
+
+Try test 5 with polynomial kernel
+	./runall.sh poly5 5
+	kernel selection needs to be writing in the script
+	argument-based selection will be added in future versions
