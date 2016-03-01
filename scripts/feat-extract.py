@@ -42,8 +42,8 @@ for set in ['set1', 'set2', 'set3', 'set4', 'set5', 'independent-set']:
 
 	for seq in seqs:
 		for letter in seq:
-			code.append(nametonumb[letter][2])
-			PC.append(nametonumb[letter][3])
+			code.append(nametonumb[letter][0])
+			PC.append(nametonumb[letter][1])
 	for group in groups:
 		for letter in group:
 			if letter.strip() == 'b':
@@ -53,6 +53,6 @@ for set in ['set1', 'set2', 'set3', 'set4', 'set5', 'independent-set']:
 
 	f = open('../experiments/'+folder+set+'.svm', 'w')
 	for j in range(len(outcome)):
-		f.write ('{0} 1:{1} 2:{2} \n'.format(outcome[j], code[j], PC[j]))
+		f.write ('{0} {1}:1 {2}:1 \n'.format(outcome[j], code[j], PC[j]))
 
 	f.close()

@@ -28,6 +28,12 @@ else
 	exit
 fi
 
+if [ -z "$2" ]
+then
+	num=1
+else
+	num="$2"
+fi
 # 1 Divide into test, training and independet taking care of homologs
 "$path"/set-divide_homologs.py "$name"
 
@@ -35,7 +41,7 @@ fi
 "$path"/feat-extract.py "$name"
 
 # Merge training and rename test set
-mv "../experiments/$name/set$2.svm" "../experiments/$name/test.svm"
+mv "../experiments/$name/set$num.svm" "../experiments/$name/test.svm"
 for i in $( ls ../experiments/* | grep set.\.svm );
 do
 	cat "../experiments/$name/$i" > "../experiments/$name/training.svm"
