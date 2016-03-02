@@ -2,6 +2,6 @@ data/
 references/
 scripts/svm_light/
 scripts/*.swp
-outs/
+outs/formatdb.log
 logs/
 experiments/
