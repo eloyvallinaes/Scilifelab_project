@@ -1,0 +1,21 @@
+spar1
+Runtime in cpu-seconds: 3546.89
+spar2
+Runtime in cpu-seconds: 3588.85
+spar3
+Runtime in cpu-seconds: 3581.67
+spar4
+Runtime in cpu-seconds: 3571.01
+spar5
+Runtime in cpu-seconds: 1985.68
+
+spar1
+Precision/recall on test set: 71.58%/75.99%
+spar2
+Precision/recall on test set: 72.06%/74.60%
+spar3
+Precision/recall on test set: 72.12%/74.53%
+spar4
+Precision/recall on test set: 71.86%/74.56%
+spar5
+Precision/recall on test set: 71.51%/74.64%
