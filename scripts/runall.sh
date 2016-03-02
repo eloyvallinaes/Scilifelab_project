@@ -42,10 +42,10 @@ fi
 
 # Merge training and rename test set
 mv "../experiments/$name/set$num.svm" "../experiments/$name/test.svm"
-for i in $( ls ../experiments/* | grep set.\.svm );
+for i in $( ls ../experiments/"$name"/* | grep set.\.svm );
 do
-	cat "../experiments/$name/$i" > "../experiments/$name/training.svm"
-	rm "../experiments/$name/$i"
+	cat "$i" > "../experiments/$name/training.svm"
+	rm "$i"
 done
 
 
@@ -55,15 +55,15 @@ done
 	"$spath"/experiments/"$name"/model $> "$spath"/experiments/"$name"/train.log & pid=$!
 
 ########################### Working in progress indicator
-#spin='-\|/-|'						#
+spin='-\|/-|'						#
 							#
-#i=0							#
-#while kill -0 $pid 2>/dev/null				#
-#do							#
-#  i=$(( (i+1) %6 ))					#
-#  printf "\r Training. Be patient... ${spin:$i:1}"	#
-#  sleep .5						#
-#done							#
+i=0							#
+while kill -0 $pid 2>/dev/null				#
+do							#
+  i=$(( (i+1) %6 ))					#
+  printf "\r Training. Be patient... ${spin:$i:1}"	#
+  sleep .5						#
+done							#
 #########################################################
 
 sleep 10
