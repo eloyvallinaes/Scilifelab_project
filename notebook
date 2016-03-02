@@ -160,3 +160,24 @@ Review results form linear and polynomial kernel for the 5 test sets
 
 Change feat-extract to sparse encoding and repeat
 	add entries to dictionary
+
+############### Wed 2nd Mar 2016 ################
+
+Sparse encoding run
+	better precision
+	worse recall
+
+uniref90 database downloaded, decompressed and formated
+	formatdb reported a bunch of errors: invalidad characters
+	see output in outs/formatdb.log
+
+
+PSI-blast
+
+Multiple sequence fasta divided into single-sequence fasta
+	scripts/seq-split.py
+
+Loop over single-sequence fasta to run psiblast
+	scripts/psiBlast-run.sh
+	left running (may take several days) 
+	
