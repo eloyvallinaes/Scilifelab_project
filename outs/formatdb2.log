@@ -1,0 +1,39 @@
+[formatdb] ERROR: uniref90.fasta.02.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [2] in VisibleString [UnaRef90_A9E3U7 Carbomoylp`osphate synthasm (Fragment) n=3 Tax=Agromyza RepID=A1E3]7_9MUSC#ILVLTYPLVGNYGIPSAKECDENOMPQHFEWDEGISVSALVVGEICDTPSHWRSQETLSQ ...]
+[formatdb] ERROR: uniref90.fasta.04.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [4] in VisibleString [Keto-deoxy-phosphoglu#onate aldolase n=1 Tax=Idiomarina zobellii RepI#=A0A0N0ZM35_9GA ...]
+[formatdb] ERROR: uniref90.fasta.04.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [11] in VisibleString [UniRef90_A0A0N1#P58 Octanoyltransferase n=2 Tax=Idiomarina RepID=A0A0N1KP58_9GAMM ...]
+[formatdb] ERROR: uniref90.fasta.04.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [14] in VisibleString [UniRef90_A0A0N0IMR3 Adenosylmethionine-8-amino-7-oxononanoate aminotransferase n=2 Tax=Idiomarina RepID=A0A0#0IMR3_9GAMM ...]
+[formatdb] ERROR: uniref90.fasta.04.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [21] in VisibleString [#niRef90_A0A0N0Z#L0 FAD-dependen4 oxidoreductase n=1 Tax=Idiomarina zobellii RepID=A0A0N0ZNL0_9GAMM ...]
+[formatdb] WARNING: Sequence number 17929161 (lcl|5612_uniref90.fasta.06), 1 illegal character was removed:
+1 -
+
+[formatdb] ERROR: uniref90.fasta.07.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [18] in VisibleString [Uni#ef90_A0A017RWW2`Uncharacterized protein n=1 Tax=Fervidicella me4allireducens AeB RepID=A0A017RWW2_9CLOT ...]
+[formatdb] ERROR: uniref90.fasta.07.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [20] in VisibleString [UniRef90_A0A017RX62 Uncharacteri:ed protein n=1 #ax=Fervidicella`metallireducens AeB RepID=A0A017RX62_9CLOT ...]
+[formatdb] WARNING: Sequence number 26490820 (lcl|15084_uniref90.fasta.08), 2 illegal characters were removed:
+2 -s
+
+[formatdb] ERROR: uniref90.fasta.08.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [16] in VisibleString [UniRef90_F0RM42 ATP-d%pendent DNA helicase RecG n=1 Tax=Deinococcus proteolyticus (strain ATCC 35074 o DSM 20540 / JCM 6276 / NBRC 101906 / NCIMB 13154 / VKM Ac-1939`/ CCM 2703 / MR#) RepID=F0RM42_DEIPM ...]
+[formatdb] ERROR: uniref90.fasta.08.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [2] in VisibleString [UniRef9p_F0RPX5 Uncharacterized protein`n=1 Tax=Deinococcus proteolyticus (strain ATCC 35074 / DSM 2054p / JCM 6276 / N#RC 101906 / NCIMB 13154 / VKM A#-1939 / CCM 2703 / MRP) RepID=F0RPX5_DEIPM ...]
+[formatdb] ERROR: uniref90.fasta.08.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [3] in VisibleString [UniRef90_F0RR77 Replication initiator protein A n=1 Tax=Deinococcus proteolyticus (strain ATCC 35074 / DSM 20540 / JCM 6276 / NBRC 101906 / N#IMB 13154 / VKM`Ac-1939 / CCM 2w03 / MRP) RepID=F0RR77_DEIPM ...]
+[formatdb] ERROR: uniref90.fasta.08.phrOutput
+Blast-def-line-set.E.<title>
+Invalid value(s) [4] in VisibleString [UniRef90_L0ISC6 dTDP-D-glucose 4,6-$ehydratase n=2 Tax=Mycobacteriu- smegmatis RepI#=L0ISC6_MYCSM ...]

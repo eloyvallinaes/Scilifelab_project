@@ -1,0 +1,4 @@
+./psiBlast-run.sh: line 5: 22621 Segmentation fault      (core dumped) ./blast-2.2.26/bin/blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+./psiBlast-run.sh: line 5: 22838 Segmentation fault      (core dumped) ./blast-2.2.26/bin/blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+./psiBlast-run.sh: line 5: 23473 Segmentation fault      (core dumped) ./blast-2.2.26/bin/blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+./psiBlast-run.sh: line 5: 24231 Segmentation fault      (core dumped) ./blast-2.2.26/bin/blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi

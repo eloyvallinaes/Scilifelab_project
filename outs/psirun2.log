@@ -1,0 +1,17 @@
+psiBlast-run2.sh: line 5: 10909 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 13559 Bus error               (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 15352 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 15552 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+Selenocysteine (U) at position 375 replaced by X
+Selenocysteine (U) at position 615 replaced by X
+psiBlast-run2.sh: line 5: 20544 Bus error               (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 23491 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 23685 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 24003 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 24348 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 24494 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 25037 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 25317 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 25770 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 25916 Segmentation fault      (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
+psiBlast-run2.sh: line 5: 26369 Bus error               (core dumped) blastpgp -j 3 -d ../data/uniref90.fasta -i $sequence -o "$name".blastpgp -Q "$name".psi
