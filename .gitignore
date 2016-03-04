@@ -1,6 +1,7 @@
 data/
 references/
 scripts/svm_light/
+scripts/blast-2.2.26/
 scripts/*.swp
 outs/formatdb.log
 logs/
